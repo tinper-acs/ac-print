@@ -50,4 +50,7 @@
     .ac-tips-out.warning .ac-tips-close:hover {
       color: #ff9800; }
 
+.ac-print-demo .u-button {
+  pointer-events: none; }
+
 /*# sourceMappingURL=demo.css.map */

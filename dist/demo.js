@@ -76,7 +76,7 @@
 	
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : _defaults(subClass, superClass); }
 	
-	var Demo1 = __webpack_require__(269);var DemoArray = [{ "example": _react2['default'].createElement(Demo1, null), "title": " 基本使用", "code": "/**\n*\n* @title 基本使用\n* @description 此示例仅做使用说明，需配合项目使用，无法展示\n*\n*/\nimport React, { Component } from 'react';\nimport { Button } from 'tinper-bee';\nimport Print from 'ac-print';\n\nclass Demo1 extends Component {\n    constructor(props){\n        super(props);\n        this.print = new Print()\n    }\n\n    printView=()=>{\n        this.print.printView('testDataId',()=>{console.log('callback')})\n    }\n    printDesign=()=>{\n        this.print.printDesign(()=>{console.log('callback')})\n    }\n\n    render () {\n        return (\n            <div>\n                <Button onClick={this.printView} style={{'marginRight':'20px'}}>打印预览</Button>\n                <Button onClick={this.printDesign}>打印设计</Button>\n            </div>\n        )\n    }\n}\nexport default Demo1", "desc": " 此示例仅做使用说明，需配合项目使用，无法展示" }];
+	var Demo1 = __webpack_require__(269);var DemoArray = [{ "example": _react2['default'].createElement(Demo1, null), "title": " 基本使用", "code": "/**\n*\n* @title 基本使用\n* @description 此示例仅做使用说明，需配合项目使用，无法展示\n*\n*/\nimport React, { Component } from 'react';\nimport { Button } from 'tinper-bee';\nimport Print from 'ac-print';\n\nclass Demo1 extends Component {\n    constructor(props){\n        super(props);\n        this.print = new Print()\n    }\n\n    printView=()=>{\n        this.print.printView('testDataId',()=>{console.log('callback')})\n    }\n    printDesign=()=>{\n        this.print.printDesign(()=>{console.log('callback')})\n    }\n\n    render () {\n        return (\n            <div className='ac-print-demo'>\n                <Button onClick={this.printView} style={{'marginRight':'20px'}}>打印预览</Button>\n                <Button onClick={this.printDesign}>打印设计</Button>\n            </div>\n        )\n    }\n}\nexport default Demo1", "desc": " 此示例仅做使用说明，需配合项目使用，无法展示" }];
 	
 	var Demo = function (_Component) {
 	    _inherits(Demo, _Component);
@@ -37123,7 +37123,7 @@
 	    Demo1.prototype.render = function render() {
 	        return _react2['default'].createElement(
 	            'div',
-	            null,
+	            { className: 'ac-print-demo' },
 	            _react2['default'].createElement(
 	                _beeButton2['default'],
 	                { onClick: this.printView, style: { 'marginRight': '20px' } },

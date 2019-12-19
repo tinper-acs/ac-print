@@ -23,7 +23,7 @@ class Demo1 extends Component {
 
     render () {
         return (
-            <div>
+            <div className='ac-print-demo'>
                 <Button onClick={this.printView} style={{'marginRight':'20px'}}>打印预览</Button>
                 <Button onClick={this.printDesign}>打印设计</Button>
             </div>
